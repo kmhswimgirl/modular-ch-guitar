@@ -15,6 +15,7 @@
 #define BLUE_KEY 11
 #define ORANGE_KEY 12
 
+// strum bar definitions
 #define S_UP 10
 #define S_DOWN 18
 
