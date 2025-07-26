@@ -35,15 +35,15 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 add_executable(clone-hero-1 
-    clone-hero-1.c
+    clone-hero-1.c 
     usb_descriptors.c
 )
 
 pico_set_program_name(clone-hero-1 "clone-hero-1")
 pico_set_program_version(clone-hero-1 "0.1")
 
-# Generate PIO header
-pico_generate_pio_header(clone-hero-1 ${CMAKE_CURRENT_LIST_DIR}/blink.pio)
+# # Generate PIO header
+# pico_generate_pio_header(clone-hero-1 ${CMAKE_CURRENT_LIST_DIR}/blink.pio)
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(clone-hero-1 1)
@@ -65,7 +65,6 @@ include_directories(${CMAKE_SOURCE_DIR}/pico-sdk/src/rp2_common/tinyusb/include)
 target_link_libraries(clone-hero-1 
         hardware_i2c
         hardware_pio
-        
         )
 
 pico_add_extra_outputs(clone-hero-1)
